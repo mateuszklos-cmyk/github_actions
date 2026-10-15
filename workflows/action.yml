@@ -1,0 +1,19 @@
+name: Example action
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  example-job:
+    name: Example job
+    runs-on: ubuntu latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Echo some message
+        run: echo "Hello"
+          
+
